@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
     <embeddable name="Tuzex\Ddd\SharedKernel\Domain\Money">
-        <field name="amountInSubUnit" type="integer" column="amount" />
+        <field name="amountInFractionalUnit" type="integer" column="amount" />
         <field name="currency" type="currency" column="currency"/>
     </embeddable>
 </doctrine-mapping>
