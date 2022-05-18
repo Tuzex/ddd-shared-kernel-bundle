@@ -1,0 +1,44 @@
+{
+  "name": "tuzex/ddd-shared-kernel-bundle",
+  "description": "",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edo Barnas",
+      "email": "iam@edobarnas.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "config": {
+    "platform": {
+      "php": "8.1",
+      "ext-intl": "1"
+    },
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Tuzex\\Bundle\\Ddd\\SharedKernel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tuzex\\Bundle\\Ddd\\SharedKernel\\Test\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "symfony/framework-bundle": "5.*|6.*",
+    "tuzex/ddd-shared-kernel": "dev-master"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "1.6.*",
+    "phpstan/phpstan-phpunit": "1.1.*",
+    "phpunit/phpunit": "9.5.*",
+    "symplify/easy-coding-standard": "10.2.*"
+  }
+}
