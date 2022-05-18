@@ -13,6 +13,12 @@ final class DddSharedKernelExtension extends Extension implements PrependExtensi
     public function prepend(ContainerBuilder $container): void
     {
         $container->prependExtensionConfig('doctrine', [
+            'dbal' => [
+                'types' => [
+                    'tuzex.currency' => 'Tuzex\Ddd\SharedKernel\Infrastructure\Persistence\Doctrine\Dbal\Type\Money\CurrencyType',
+                    'tuzex.measure_unit' => 'Tuzex\Ddd\SharedKernel\Infrastructure\Persistence\Doctrine\Dbal\Type\Quantity\MeasureUnitType',
+                ],
+            ],
             'orm' => [
                 'mappings' => [
                     'DddSharedKernelBundle' => [
